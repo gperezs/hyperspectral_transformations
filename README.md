@@ -1,10 +1,11 @@
 # Hyperspectral augmentations
 
-Implementation of transformations for hyperspectral images using PyTorch modules. This repo was created to use hyperspectral transformations with [BYOL](https://github.com/lucidrains/byol-pytorch).
+Implementation of transformations for hyperspectral images using [PyTorch](https://pytorch.org/) modules and [kornia](https://github.com/kornia/kornia). This repo was created to use hyperspectral transformations with [BYOL](https://github.com/lucidrains/byol-pytorch).
 
 Below is a modified version of `byol-pytorch/byol_pytorch/byol_pytorch.py` with the hyperspectral transformations.
 ```
 import hyperspectralTransforms as HST
+from kornia import filters
 
 DEFAULT_AUG = torch.nn.Sequential(
                 RandomApply( 
